@@ -149,6 +149,11 @@ export const getNavData = app => [
         icon: 'warning',
         children: [
           {
+            name: '触发异常',
+            path: 'trigger',
+            component: dynamicWrapper(app, ['error'], () => import('../routes/Exception/triggerException.js')),
+          },
+          {
             name: '403',
             path: '403',
             component: dynamicWrapper(app, [], () => import('../routes/Exception/403')),
